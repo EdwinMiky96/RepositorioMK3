@@ -5,7 +5,8 @@ public class App {
         System.out.println("Hello, World!");
         
         SubProgramass objSP=new SubProgramass();
-        objSP.calcularFuncionExponecial();
+        //objSP.calcularFuncionExponecial();
+        System.out.println("factorial: "+objSP.factorialBig(1000));
 
     }
 }

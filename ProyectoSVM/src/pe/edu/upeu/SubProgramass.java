@@ -1,5 +1,7 @@
 package pe.edu.upeu;
 
+import java.math.BigInteger;
+
 import pe.edu.upeu.util.TecladoRead;
 
 public class SubProgramass {
@@ -9,6 +11,16 @@ public class SubProgramass {
 
     public static int factorial(int numero) {
         int factorialResult=1;
+        if(numero>1){
+            for (int i = 2; i <= numero; i++) {
+                factorialResult*=i;
+            }
+        }
+        return factorialResult;        
+    }
+
+    public long factorialLong(int numero) {
+        long factorialResult=1;
         if(numero>1){
             for (int i = 2; i <= numero; i++) {
                 factorialResult*=i;
@@ -39,6 +51,18 @@ public class SubProgramass {
         }
         //Datos de salida
         System.out.println("La funcion exponencial de e^x es:"+fx);
+    }
+
+    //Calcula el factorial de cualquier numero
+    public BigInteger factorialBig(int numero) {
+        BigInteger factorialResult = new BigInteger("1");
+        ;
+        if(numero>1){
+            for (int i = 2; i <= numero; i++) {                
+                factorialResult=factorialResult.multiply(new BigInteger(String.valueOf(i)));
+            }
+        }
+        return factorialResult;        
     }
 
 }
